@@ -1,0 +1,674 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+body, html {
+    font-family: "Montserrat", sans-serif;
+    scroll-behavior: smooth;
+    scroll-snap-type: y proximity;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background: transparent;
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(#dbdbdb, #a7a7a7, #dbdbdb);
+    border-radius:  5px;
+}
+::-webkit-scrollbar-thumb {
+    background-clip: padding-box;
+    border: 2px solid transparent;
+}
+
+.header-center {
+    margin-top: 19%;
+    text-align: center;
+}
+
+.header-center h1 {
+    color: #111111;
+    font-family: "Sedgwick Ave Display", cursive;
+    font-size: 90px;
+    animation: appear 0.7s ease-out;
+    position: relative;
+    background: transparent;
+    z-index: 1;
+}
+
+.header-center h2 {
+    color: #353535;
+    position: relative;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: appear 1.2s ease-out 150ms forwards;
+    margin-top: -65px;
+    padding: 70px;
+    padding-bottom: 100px;
+    font-size: 36px;
+    font-weight: 400;
+    z-index: 2;
+}
+
+.header-under {
+    position: relative;
+    background-color: white;
+    padding: 70px;
+    margin-top: -110px;
+    margin-bottom: 12%;
+    z-index: 3;
+}
+
+.aboutme-left1{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    font-size: 70px;
+    opacity: 0.1;
+    max-width: 800px;
+    animation: appearX linear forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 90%;
+}
+.aboutme-right1{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    top: -170px;
+    font-size: 30px;
+    font-weight: 300;
+    margin-left: 15%;
+    margin-right: 20%;
+}
+
+.aboutme-left2{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    font-size: 70px;
+    opacity: 0.1;
+    animation: appear-X linear forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 90%;
+}
+.aboutme-right2{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    top: -170px;
+    font-size: 24px;
+    font-weight: 300;
+    margin-left: 20%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+}
+
+.aboutme-right2 a{
+    color: #857551;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 1;
+        transform: translateY(150px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes appearY{
+    from{
+        transform: translateY(500px);
+    }
+    to{
+        transform: translateY(-300px);
+    }
+}
+
+@keyframes appearX{
+    from{
+        transform: translateX(0px);
+    }
+    to{
+        transform: translateX(150px);
+    }
+}
+
+@keyframes appear-X{
+    0%{
+        transform: translateX(0px);
+    }
+    50%{
+        transform: translateX(-150px);
+    }
+    100%{
+        transform: translateX(-300px);
+    }
+}
+
+@keyframes appear-footer{
+    0%{
+        transform: translateX(0px);
+    }
+    50%{
+        transform: translateX(80px);
+    }
+    100%{
+        transform: translateX(100px);
+    }
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 48% 48%;
+    margin-left: 2%;
+    margin-bottom: 2%;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+  
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    
+}
+
+.grid-item h1{
+    color: #353535;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 33%;
+}
+
+.grid-item h2{
+    color: #111111;
+    font-family: "Sedgwick Ave Display", cursive;
+    font-size: 100px;
+    margin-left: 15%;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.grid-item h2:hover {
+    transform: scale(1.1) translateX(1%);
+  }
+
+.grid-item h3{
+    color: #353535;
+    font-size: 26px;
+    font-weight: 500;
+    margin-left: 15%;
+    margin-top: -50px;
+}
+
+.grid-item h4{
+    color: #353535;
+    font-size: 22px;
+    font-weight: 400;
+    margin-left: 15%;
+}
+
+.grid-item h5{
+    color: #353535;
+    font-size: 28px;
+    font-weight: 600;
+    margin-top: 33%;
+}
+
+.grid-item img{
+    max-width: 70%;
+    margin-bottom: -15%;
+    animation: appearY linear forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 100%;
+}
+
+.left{
+    margin-left: -5%;
+    margin-top: 2%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.left:hover{
+    transform: scale(1.03) translateX(-2%);
+}
+
+.right{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin-top: -7%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.right:hover{
+    transform: scale(1.03) translateX(-2%);
+}
+
+.oneimg{
+    width: 90%;
+    margin-top: 20%;
+    margin-left: 22%;
+}
+
+.header-ex1{
+    display: flex;
+    justify-content: center;
+    font-family: "Sedgwick Ave Display", cursive;
+    margin-top: 10%;
+}
+
+.header-ex2{
+    display: flex;
+    justify-content: center;
+    font-family: "Sedgwick Ave Display", cursive;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.workex{
+    margin-bottom: 10%;
+}
+
+.workex-container{
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.workex h1{
+    color: #111111;
+    font-size: 80px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.workex h1:hover{
+    transform: scale(1.1) translateX(1%);
+}
+
+.workex-container h2{
+    color: #242424;
+    font-size: 27px;
+    font-weight: 700;
+    margin-top: 5%;
+}
+
+.workex-container h3{
+    color: #353535;
+    font-size: 23px;
+    font-weight: 500;
+}
+
+.workex-container h4{
+    color: #353535;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.workex-container li{
+    color: #353535;
+    font-size: 17px;
+
+}
+
+.skills1{
+    color: #353535;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    top: -170px;
+    font-size: 32px;
+    font-weight: 400;
+    margin-left: 15%;
+}
+
+.skills2{
+    color: #353535;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    top: -440px;
+    font-size: 32px;
+    font-weight: 400;
+    margin-left: 15%;
+    margin-right: 5%;
+}
+
+.gallery{
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.galleykub{
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.galley-container{
+    height: 500px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+}
+
+.card{
+    width: 100px;
+    border-radius: .75rem;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin: 0 10px;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(.28,-0.03,0,.99);
+    box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+}
+
+.card > .row{
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.card > .row > .icon{
+    background: #111111;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+.card > .row > .description{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 80px;
+    width: 520px;
+    opacity: 0;
+}
+
+input{
+    display: none;
+}
+
+input:checked + label{
+    width: 980px;
+}
+
+input:checked + label .description{
+    opacity: 1 ;
+    transform: translateY(0);
+}
+
+.card[for="c1"]{
+    background-image: url('images/gallery/1.jpg');
+}
+
+.card[for="c2"]{
+    background-image: url('images/gallery/2.jpg');
+}
+
+.card[for="c3"]{
+    background-image: url('images/gallery/3.jpg');
+}
+
+.card[for="c4"]{
+    background-image: url('images/gallery/4.jpg');
+}
+
+.footer{
+    margin-top: 25%;
+}
+
+.center{
+    display: table;
+    width: 100%;
+    margin-top: 20%;
+    margin-bottom: 5%;
+}
+  
+  #social-test{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 50px;
+    .social{
+      padding-left: 0px;
+    }
+    li{
+      color: #111111;
+      list-style-type: none;
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      padding: 1%;
+      cursor: pointer;
+      margin-left: 10px;
+      transition: ease .3s;
+      border-radius: 5px;
+      &:hover {
+        color: #242424;
+        border: 1px solid #111111;
+        border-radius: 15px;
+      }
+    }
+    a{
+      color: #111111;
+    }
+  }
+  
+.social:hover > li{
+    opacity: 0.7;
+}
+  
+.social:hover > li:hover{
+    opacity: 1;
+}
+
+@media (max-width: 1600px) {
+    .aboutme-left1{
+        font-size: 65px;
+    }
+
+    .aboutme-left2{
+        font-size: 65px;
+    }
+    .aboutme-right1{
+        font-size: 28px;
+    }
+    .aboutme-right2{
+        font-size: 22px;
+    }
+    .left{
+        margin-top: 7%;
+    }
+    .oneimg{
+        margin-top: 25%;
+    }
+    .skills1{
+        color: #353535;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        top: -170px;
+        font-size: 28px;
+        font-weight: 400;
+        margin-left: 10%;
+    }
+    
+    .skills2{
+        color: #353535;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        top: -410px;
+        font-size: 28px;
+        font-weight: 400;
+        margin-left: 15%;
+        margin-right: 5%;
+    }
+    .header-gallery{
+        top: 1026%; 
+    }
+    input:checked + label{
+        width: 680px;
+    }
+    .header-footer {
+        font-size: 48px;
+        top: 1108%;
+    }
+}
+
+@media (max-width: 1536px) {
+    .aboutme-left1{
+        font-size: 65px;
+    }
+
+    .aboutme-left2{
+        font-size: 65px;
+    }
+    .aboutme-right1{
+        font-size: 28px;
+    }
+    .aboutme-right2{
+        font-size: 22px;
+    }
+    .left{
+        margin-top: 7%;
+    }
+    .oneimg{
+        margin-top: 28%;
+    }
+    .header-center{
+        margin-top: 15%;
+    }
+    .grid-item h1{
+        margin-bottom: 23%;
+    }
+    .grid-item h5{
+        margin-top: 23%;
+    }
+    .left img{
+        margin-top: -7%;
+    }
+    .header-gallery{
+        top: 970%; 
+    }
+    input:checked + label{
+        width: 680px;
+    }
+    .header-footer {
+        font-size: 48px;
+        top: 1050%;
+    }
+}
+
+@media (max-width: 1280px) {
+    .header-center {
+        margin-top: 13%;
+        text-align: center;
+    }
+    .aboutme-left1{
+        font-size: 55px;
+        margin-bottom: 2%;
+    }
+
+    .aboutme-left2{
+        font-size: 55px;
+        margin-bottom: 2%;
+    }
+    .aboutme-right1{
+        font-size: 26px;
+    }
+    .aboutme-right2{
+        font-size: 20px;
+    }
+    .left{
+        margin-top: 12%;
+    }
+    .oneimg{
+        margin-top: 20%;
+    }
+    .grid-item h1{
+        color: #353535;
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 18%;
+    }
+    
+    .grid-item h2{
+        color: #111111;
+        font-family: "Sedgwick Ave Display", cursive;
+        font-size: 80px;
+        margin-left: 15%;
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    .grid-item h2:hover {
+        transform: scale(1.1) translateX(1%);
+      }
+    
+    .grid-item h3{
+        color: #353535;
+        font-size: 22px;
+        font-weight: 500;
+        margin-left: 15%;
+        margin-top: -50px;
+    }
+    
+    .grid-item h4{
+        color: #353535;
+        font-size: 20px;
+        font-weight: 400;
+        margin-left: 15%;
+    }
+    
+    .grid-item h5{
+        color: #353535;
+        font-size: 20px;
+        font-weight: 600;
+        margin-top: 18%;
+    }
+    .skills1{
+        font-size: 22px;
+    }
+    .skills2{
+        margin-top: 4%;
+        font-size: 22px;
+    }
+    .header-gallery{
+        font-size: 28px;
+        top: 976%; 
+    }
+    input:checked + label{
+        width: 500px;
+    }
+    .header-footer {
+        font-size: 38px;
+        top: 1043%;
+    }
+    
+}
